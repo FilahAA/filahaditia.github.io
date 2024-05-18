@@ -31,11 +31,10 @@ jobs:
 # Build job
 build:
     runs-on: ubuntu-latest
-    env:
-    HUGO_VERSION: 0.125.7
     steps:
     - name: Install Hugo CLI
         run: |
+        sudo apt install hugo
         wget https://github.com/gohugoio/hugo/releases/download/v0.125.7/hugo_extended_0.125.7_linux-amd64.deb
         sudo dpkg -i hugo_extended_0.125.7_linux-amd64.deb"
     - name: Checkout
